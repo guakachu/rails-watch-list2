@@ -23,12 +23,29 @@ Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal masterm
 
 puts "#{Movie.count} movies created"
 
-List.create(name: 'Blockbusters')
-List.create(name: 'Western Movies')
-List.create(name: 'Horror Movies')
-List.create(name: 'French Movies')
-List.create(name: 'Drama')
-List.create(name: 'Adventure')
+list1 = List.new(name: 'Blockbusters')
+list1.photo.attach(io: URI.open('https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1718&q=80'), filename: "seed.png", content_type: "image/png")
+list1.save
+
+list2 = List.new(name: 'Western Movies')
+list2.photo.attach(io: URI.open('https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1718&q=80'), filename: "seed.png", content_type: "image/png")
+list2.save
+
+list3 = List.new(name: 'Horror Movies')
+list3.photo.attach(io: URI.open('https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1718&q=80'), filename: "seed.png", content_type: "image/png")
+list3.save
+
+list4 = List.new(name: 'French Movies')
+list4.photo.attach(io: URI.open('https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1718&q=80'), filename: "seed.png", content_type: "image/png")
+list4.save
+
+list5 = List.new(name: 'Drama')
+list5.photo.attach(io: URI.open('https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1718&q=80'), filename: "seed.png", content_type: "image/png")
+list5.save
+
+list6 = List.new(name: 'Adventure')
+list6.photo.attach(io: URI.open('https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1718&q=80'), filename: "seed.png", content_type: "image/png")
+list6.save
 
 puts "#{List.count} lists created"
 
