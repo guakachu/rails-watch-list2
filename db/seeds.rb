@@ -12,6 +12,7 @@ puts "Cleaning up database..."
 Bookmark.destroy_all
 Movie.destroy_all
 List.destroy_all
+Review.destroy_all
 
 puts "DB cleaned-up"
 
@@ -61,6 +62,12 @@ Bookmark.create(comment: Faker::Markdown.emphasis, movie_id: Movie.all.sample.id
 Bookmark.create(comment: Faker::Markdown.emphasis, movie_id: Movie.all.sample.id, list_id: List.all.sample.id)
 Bookmark.create(comment: Faker::Markdown.emphasis, movie_id: Movie.all.sample.id, list_id: List.all.sample.id)
 
-
-
 puts "#{Bookmark.count} bookmarks created"
+
+List.all.each do |list|
+  4.times do
+    Review.create(comment: Faker::Markdown.emphasis, rating: Faker::Number.between(from: 0.0, to: 5.0).round(2), list: list)
+  end
+end
+
+puts "#{Review.count} reviews created"
